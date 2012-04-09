@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+
+		<form-bean name="searchForm" type="org.filesearcher.search.SearchForm" />
+
+
+	</form-beans>
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+
+		<action path="/SearchInit" type="org.filesearcher.search.SearchAction"
+			scope="request" validate="false" name="searchForm">
+			<forward name="success" path="/pages/results.jsp" />
+		</action>
+
+		<action path="/search" type="org.filesearcher.search.SearchAction"
+			scope="request" validate="false" name="searchForm">
+			<forward name="error" path="/pages/error.jsp" />
+			<forward name="success" path="/pages/results.jsp" />
+		</action>
+
+	</action-mappings>
+</struts-config>
+
