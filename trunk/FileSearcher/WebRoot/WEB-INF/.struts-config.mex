@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/SearchInit.do" location="950,150" dimension="99,62" />
+  <StrutsActivity path="/search.do" location="50,150" dimension="135,88" />
+  <StrutsActivity path="/pages/results.jsp" location="950,50" dimension="131,49" />
+  <StrutsActivity path="/pages/error.jsp" location="350,150" dimension="122,49" />
+  <StrutsActivity path="/pages/blast/loading/loading.jsp" location="350,50" dimension="212,49" />
+  <StrutsActivity path="/pages/blast/blastSubmitError.jsp" location="650,50" dimension="217,49" />
+  <StrutsActivity path="/pages/blast.jsp" location="350,250" dimension="120,49" />
+  <StrutsTransition id="/SearchInit.do,success,/pages/results.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1015,150" />
+      <AbsolutePoint location="1015,99" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/search.do,error,/pages/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="185,174" />
+      <AbsolutePoint location="350,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/search.do,success,/pages/results.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="117,150" />
+      <AbsolutePoint location="117,114" />
+      <AbsolutePoint location="985,114" />
+      <AbsolutePoint location="985,99" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+
