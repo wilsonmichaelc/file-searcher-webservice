@@ -1,0 +1,1 @@
+The purpose of this app was to facilitate searching through copious amounts of data with highly similar filenames. Due to the nature of this particular setup, a Web Service was the best choice to provide access from offsite.
